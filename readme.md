@@ -1,3 +1,6 @@
+
+
+
 # 🚑 Smart Emergency Medical Response System
 
 A **software-based emergency healthcare platform** designed to reduce response time during medical emergencies by connecting **patients, ambulance drivers, and hospitals** through a real-time, Uber-style workflow.
@@ -6,8 +9,146 @@ A **software-based emergency healthcare platform** designed to reduce response t
 ## Problem Statement
 In emergency medical situations, delays often occur due to lack of coordination between patients, ambulance services, and hospitals. Manual communication and absence of real-time systems lead to increased response time, which can result in loss of life.
 
----
+---We Uploaded Our Project in Google Drive as Docker Read the following instructions to Run the project
+This guide explains step by step how to extract the project from Google Drive, install Docker, and run the backend using a Dockerfile.
 
+📥 Step 1: Download Project from Google Drive
+
+Open the shared Google Drive link
+
+Right-click the project folder or ZIP file
+
+Click Download
+
+The file will be downloaded as a .zip file
+
+Example:
+
+medical-response-backend.zip
+
+📂 Step 2: Extract the ZIP File
+
+Go to your Downloads folder
+
+Right-click the ZIP file
+
+Click Extract All
+
+Choose a location and click Extract
+
+After extraction, you should see a folder like:
+
+medical-response-backend/
+ ├── Dockerfile
+ ├── pom.xml
+ ├── src/
+ ├── target/
+
+
+⚠️ Make sure the Dockerfile is present.
+
+🐳 Step 3: Install Docker Desktop (Mandatory)
+
+Docker is required to run this project.
+
+🔹 Download Docker Desktop
+
+👉 https://www.docker.com/products/docker-desktop/
+
+Click Download for Windows
+
+🔹 Install Docker Desktop
+
+During installation:
+
+✅ Enable WSL 2
+
+✅ Add Docker to PATH
+
+✅ Use default settings
+
+After installation, restart your system 🔄
+
+✅ Step 4: Verify Docker Installation
+
+Open PowerShell and run:
+
+docker --version
+
+
+Expected output:
+
+Docker version xx.x.x
+
+
+If this works, Docker is installed correctly.
+
+📁 Step 5: Navigate to Project Folder
+
+Open PowerShell and go to the extracted folder:
+
+cd path\to\medical-response-backend
+
+
+Example:
+
+cd C:\Users\YourName\Downloads\medical-response-backend
+
+
+Check files:
+
+dir
+
+
+You must see:
+
+Dockerfile
+
+🏗 Step 6: Build the Docker Image
+
+Run the following command:
+
+docker build -t medtech-backend .
+
+
+⏳ This may take a few minutes on the first run.
+
+If successful, the build will complete without errors.
+
+▶ Step 7: Run the Docker Container
+
+Run the backend application:
+
+docker run -p 8080:8080 medtech-backend
+
+
+If port 8080 is already in use, try:
+
+docker run -p 9090:8080 medtech-backend
+
+🌐 Step 8: Access the Application
+
+Open a web browser and go to:
+
+http://localhost:8080
+
+
+(or http://localhost:9090 if you used port 9090)
+
+🧪 Helpful Docker Commands
+Check running containers
+docker ps
+
+Stop the container
+Ctrl + C
+
+
+or
+
+docker stop <container_id>
+
+View logs
+docker logs medtech-backend
 ## Objective
 - To reduce emergency response time  
 - To provide real-time ambulance assignment  
@@ -204,3 +345,4 @@ Easy to test and demonstrate
 📜 License
 
 MIT License
+
