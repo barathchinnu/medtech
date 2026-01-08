@@ -202,4 +202,5 @@ Clear documentation and architecture
 Easy to test and demonstrate
 
 📜 License
+
 MIT License
